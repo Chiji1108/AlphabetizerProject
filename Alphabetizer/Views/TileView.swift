@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TileView: View {
-    @State var tile: Tile
+    var tile: Tile
 
     private let borderWidth = 5.0
 
@@ -32,21 +32,21 @@ struct TileView: View {
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .rotation3DEffect(.degrees(tile.flipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
         .animation(.default, value: tile.flipped)
-        .onTapGesture {
-            // TODO: Move into the preview
-            tile.flipped.toggle()
-        }
     }
 
     func borderStyle() -> some ShapeStyle {
-        return LinearGradient(colors: [
-            Color(red: 157.0/255.0, green: 153.0/255.0, blue: 244.0/255.0),
-            Color(red: 246.0/255.0, green: 206.0/255.0, blue: 241.0/255.0),
-        ], startPoint: .topLeading, endPoint: .bottomTrailing)
+        return LinearGradient(
+            colors: [
+                Color(red: 157.0 / 255.0, green: 153.0 / 255.0, blue: 244.0 / 255.0),
+                Color(red: 246.0 / 255.0, green: 206.0 / 255.0, blue: 241.0 / 255.0),
+            ], startPoint: .topLeading, endPoint: .bottomTrailing)
     }
 }
 
 #Preview {
-    let tile = Tile(word: "Word")
+    let tile = Tile(word: "Bear")
     return TileView(tile: tile)
+        .onTapGesture {
+            tile.flipped.toggle()
+        }
 }

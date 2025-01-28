@@ -19,6 +19,7 @@
 		28992CD52BEEDCB600CE7827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28992CD42BEEDCB600CE7827 /* Assets.xcassets */; };
 		28992CD82BEEDCB600CE7827 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28992CD72BEEDCB600CE7827 /* Preview Assets.xcassets */; };
 		C61E13EE2D48C3340057D180 /* Alphabetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61E13ED2D48C3340057D180 /* Alphabetizer.swift */; };
+		C61E13F02D48C8800057D180 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61E13EF2D48C8800057D180 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		28992CD42BEEDCB600CE7827 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28992CD72BEEDCB600CE7827 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C61E13ED2D48C3340057D180 /* Alphabetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabetizer.swift; sourceTree = "<group>"; };
+		C61E13EF2D48C8800057D180 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				281227092C12510700E710A5 /* Tile.swift */,
+				C61E13EF2D48C8800057D180 /* Message.swift */,
 				C61E13ED2D48C3340057D180 /* Alphabetizer.swift */,
 				2812270A2C12510700E710A5 /* Vocabulary.swift */,
 			);
@@ -183,6 +186,7 @@
 				281227192C12514700E710A5 /* TileView.swift in Sources */,
 				281227152C12514700E710A5 /* ContentView.swift in Sources */,
 				2812270D2C12510700E710A5 /* Vocabulary.swift in Sources */,
+				C61E13F02D48C8800057D180 /* Message.swift in Sources */,
 				C61E13EE2D48C3340057D180 /* Alphabetizer.swift in Sources */,
 				281227182C12514700E710A5 /* SubmitButton.swift in Sources */,
 				281227162C12514700E710A5 /* MessageView.swift in Sources */,
