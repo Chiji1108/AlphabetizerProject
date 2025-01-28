@@ -16,19 +16,21 @@ class Alphabetizer {
     var score = 0
     var message: Message = .instructions
 
-    init(vocab: Vocabulary = .oceanAnimals) {
+    init(vocab: Vocabulary = .landAnimals) {
         self.vocab = vocab
         startNewGame()
     }
 
-    // Alternates true and flase
-    private var isAlphabetized = false
-
     /// Checks if tiles are in alphabetical order
     func submit() {
         // Check if the tiles are alphabetized
-        // TODO: Compare alphabetical order to position
-        isAlphabetized.toggle()
+        let userSortedTiles = tiles.sorted {
+            $0.position.x < $1.position.x
+        }
+        let alphabetizedTiles = tiles.sorted {
+            $0.word.lexicographicallyPrecedes($1.word)
+        }
+        let isAlphabetized = userSortedTiles == alphabetizedTiles
 
         // If alphabetized, increment the score
         if isAlphabetized {
@@ -39,9 +41,8 @@ class Alphabetizer {
         message = isAlphabetized ? .youWin : .tryAgain
 
         // Flip over correct tiles
-        for tile in tiles {
-            // TODO: Check if this tile is in the correct position
-            let tileIsAlphabetized = isAlphabetized
+        for (tile, correctTile) in zip(userSortedTiles, alphabetizedTiles) {
+            let tileIsAlphabetized = tile == correctTile
             tile.flipped = tileIsAlphabetized
         }
 
